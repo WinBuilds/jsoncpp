@@ -1,5 +1,8 @@
+*.lnk
 /build/
 /build-*/
+/build_*/
+
 *.pyc
 *.swp
 *.actual
@@ -21,6 +24,9 @@
 *.sdf
 *.opensdf
 *.suo
+.vs/
+*.VC.db
+*.VC.opendb
 
 # MSVC build files:
 *.lib

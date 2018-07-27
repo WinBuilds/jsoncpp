@@ -145,12 +145,14 @@ public:
 /** \brief Abstract class for writers.
  * \deprecated Use StreamWriter. (And really, this is an implementation detail.)
  */
+
 class JSONCPP_DEPRECATED("Use StreamWriter instead") JSON_API Writer {
 public:
   virtual ~Writer();
 
   virtual JSONCPP_STRING write(const Value& root) = 0;
 };
+
 
 /** \brief Outputs a Value in <a HREF="http://www.json.org">JSON</a> format
  *without formatting (not human friendly).

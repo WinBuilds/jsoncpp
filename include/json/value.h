@@ -52,7 +52,16 @@ namespace Json {
  *
  * We use nothing but these internally. Of course, STL can throw others.
  */
-class JSON_API Exception : public std::exception {
+class JSON_API Exception 
+
+#ifdef JSON_DLL_BUILD
+#undef JSONCPP_OVERRIDE
+#define JSONCPP_OVERRIDE
+#else
+   : public std::exception
+#endif
+
+{
 public:
   Exception(JSONCPP_STRING const& msg);
   ~Exception() JSONCPP_NOEXCEPT JSONCPP_OVERRIDE;
